@@ -1,9 +1,9 @@
 {
-  "name": "example-blog",
-  "version": "0.0.0",
+  "name": "simple-text-editor-site",
+  "version": "0.0.1",
   "private": true,
-  "description": "Example blog.",
-  "author": "Blake Embrey",
+  "description": "Simple Text Editor Website",
+  "author": "Maxim Starikov",
   "license": "MIT",
   "dependencies": {
     "@metalsmith/markdown": "^1.4.0",
