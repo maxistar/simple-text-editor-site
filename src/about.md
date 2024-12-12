@@ -5,12 +5,12 @@ layout: layout.hbs
 
 # About
 
-This is simple text editor that can help you with editing text files.
+This is a minimalist text editor designed to assist with editing text files.
 
-This editor mostly used by me for small text notes, write down ideas while I have a break.
+I primarily use this editor for jotting down brief notes or capturing ideas during breaks.
 
-Supports only plain text files at the moment.
+At present, it supports only plain text files.
 
-The code is open so can review code, send pull requests, new features, translations and so on. https://github.com/maxistar/TextPad.
+The code is open source, allowing you to review it, contribute pull requests, suggest new features, provide translations, and more. https://github.com/maxistar/TextPad.
 
-Any suggestions for this project are welcomed. Thank you! 
+Suggestions for enhancing this project are greatly appreciated. Thank you!

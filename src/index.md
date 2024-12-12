@@ -15,5 +15,6 @@ The code is open so can review code, send pull requests, new features, translati
 
 Any suggestions for this project are welcomed. Thank you! 
 
- - [Google Play](https://play.google.com/store/apps/details?id=com.maxistar.textpad&hl=en_US&gl=US)
- - [F-Droid](https://f-droid.org/packages/com.maxistar.textpad/)
+- [Google Play](https://play.google.com/store/apps/details?id=com.maxistar.textpad&hl=en_US&gl=US)
+- [F-Droid](https://f-droid.org/packages/com.maxistar.textpad/)
+- [Frequently Asked Questions](/faq)
