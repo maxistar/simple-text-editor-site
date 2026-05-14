@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="About" description="About Simple Text Editor, an open-source Android app for editing plain text files.">
+  <section class="page-header">
+    <div class="wrap prose">
+      <p class="eyebrow">About</p>
+      <h1>Minimal text editing for Android</h1>
+      <p class="lead">
+        Simple Text Editor is a lightweight app for editing plain text files on Android.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <p>
+        The app is useful for short notes, quick drafts, and editing simple text files directly on your device.
+        It is intentionally focused on plain text rather than rich document formats.
+      </p>
+      <p>
+        This is an open-source project maintained in personal time. You can review the code, report bugs,
+        suggest features, contribute pull requests, or help with translations.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href={site.appStore.github}>View source code</a>
+        <a class="button" href={site.appStore.issues}>Report an issue</a>
+        <a class="button" href={site.appStore.crowdin}>Help translate</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

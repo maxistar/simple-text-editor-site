@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { donationLinks, site } from '../data/site';
+---
+
+<BaseLayout title="Donate" description="Support development of Simple Text Editor.">
+  <section class="page-header">
+    <div class="wrap prose">
+      <p class="eyebrow">Donate</p>
+      <h1>Support Simple Text Editor</h1>
+      <p class="lead">Simple Text Editor is free, open source, and maintained in my spare time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <p>
+        A dedicated group of contributors helps translate the application. If you encounter errors,
+        please report them on GitHub.
+      </p>
+      <p>If you wish to support the work, you can use one of these options:</p>
+      <ul>
+        <li><strong>Buy Me a Coffee:</strong> <a href={donationLinks.buyMeACoffee}>buymeacoffee.com/maxistar</a></li>
+        <li><strong>PayPal:</strong> <a href={donationLinks.paypal}>paypal.me/maximstarikov</a></li>
+        <li><strong>Bitcoin:</strong> <a href={`bitcoin:${donationLinks.bitcoin}`}>{donationLinks.bitcoin}</a></li>
+        <li><strong>TON:</strong> <a href={`ton://transfer/${donationLinks.ton}`}>{donationLinks.ton}</a></li>
+        <li><strong>Ethereum:</strong> <code>{donationLinks.ethereum}</code></li>
+        <li><strong>USDT (TRC-20):</strong> <code>{donationLinks.usdtTrc20}</code></li>
+      </ul>
+      <p>Your support is a strong motivation to keep improving the application.</p>
+      <p><a href={site.appStore.issues}>Report an issue on GitHub</a></p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DownloadButtons from '../components/DownloadButtons.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title={site.name}>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Android plain text editor</p>
+        <h1>Simple Text Editor</h1>
+        <p class="lead">
+          A small Android app for editing plain text files, quick notes, and drafts directly on your device.
+        </p>
+        <DownloadButtons />
+      </div>
+      <div class="hero-media" aria-label="Simple Text Editor screenshot">
+        <img src="/images/screenshot-editor.png" alt="Simple Text Editor editing a plain text file" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid three">
+      <div class="panel">
+        <h2>Plain text first</h2>
+        <p>Open, edit, and save text files without extra document formats or distractions.</p>
+      </div>
+      <div class="panel">
+        <h2>Useful controls</h2>
+        <p>Work with common editing actions including new files, open, save, save as, search, settings, sharing, and printing.</p>
+      </div>
+      <div class="panel">
+        <h2>Open source</h2>
+        <p>The code is public, and contributions, translations, bug reports, and feature requests are welcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Built for everyday notes</p>
+        <h2>Focused on simple text work</h2>
+        <p class="lead">
+          Simple Text Editor is maintained as a personal open-source project. It is meant for small notes,
+          ideas, and plain text files when you want a direct editor instead of a large writing suite.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="/download/">Download the app</a>
+          <a class="button" href="/faq/">Read the FAQ</a>
+        </div>
+      </div>
+      <img class="feature" src="/images/feature-image.png" alt="Simple Text Editor app graphic" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    min-height: calc(100vh - 68px);
+    display: flex;
+    align-items: center;
+    padding: 52px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-grid,
+  .split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.8fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    display: grid;
+    gap: 22px;
+  }
+
+  .hero-media {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-media img {
+    width: min(320px, 80vw);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .panel h2 {
+    font-size: 1.35rem;
+  }
+
+  .feature {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+  }
+
+  @media (max-width: 820px) {
+    .hero {
+      min-height: auto;
+    }
+
+    .hero-grid,
+    .split {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

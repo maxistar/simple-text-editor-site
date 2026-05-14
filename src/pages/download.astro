@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DownloadButtons from '../components/DownloadButtons.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="Download" description="Download Simple Text Editor for Android from Google Play or F-Droid.">
+  <section class="page-header">
+    <div class="wrap">
+      <p class="eyebrow">Download</p>
+      <h1>Install Simple Text Editor</h1>
+      <p class="lead">Choose Google Play, F-Droid, or review the source code on GitHub.</p>
+      <DownloadButtons />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid two">
+      <div class="panel">
+        <h2>Current release</h2>
+        <p><strong>Version:</strong> {site.version}</p>
+        <p><strong>Version code:</strong> {site.versionCode}</p>
+        <p><strong>Android requirement:</strong> {site.minAndroid}</p>
+      </div>
+      <div class="panel">
+        <h2>Latest changelog</h2>
+        <ul>
+          {site.changelog.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap grid two">
+      <img class="screen" src="/images/screenshot-editor.png" alt="Simple Text Editor main editing screen" />
+      <img class="screen" src="/images/screenshot-settings.png" alt="Simple Text Editor settings screen" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header .button-row {
+    margin-top: 24px;
+  }
+
+  .screen {
+    justify-self: center;
+    width: min(320px, 100%);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+</style>

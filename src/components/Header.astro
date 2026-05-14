@@ -1,0 +1,83 @@
+---
+import { site } from '../data/site';
+---
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <img src="/images/icon.png" alt="" width="34" height="34" />
+      <span>{site.name}</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/download/">Download</a>
+      <a href="/about/">About</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/donate/">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .nav {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .brand img {
+    border-radius: 8px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 14px 0;
+      gap: 12px;
+    }
+
+    nav {
+      justify-content: flex-start;
+      gap: 14px;
+    }
+  }
+</style>

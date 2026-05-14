@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="FAQ" description="Frequently asked questions for Simple Text Editor.">
+  <section class="page-header">
+    <div class="wrap prose">
+      <p class="eyebrow">FAQ</p>
+      <h1>Frequently Asked Questions</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>I cannot save a file opened through the Android file picker.</h2>
+      <p>
+        The Android file picker does not always permit files to be opened with write permissions.
+        To make a file editable, use the Open command from the Simple Text Editor menu.
+      </p>
+      <p>
+        The app is exploring better solutions for this limitation, but this is the current workaround.
+      </p>
+
+      <h2>I would like a feature to be implemented.</h2>
+      <p>
+        Please submit a feature request on GitHub. New features may take time because the application is free
+        and maintained in limited personal time.
+      </p>
+      <p><a href={site.appStore.issues}>Request a feature</a></p>
+
+      <h2>Something is broken or not functioning as expected.</h2>
+      <p>
+        Please report bugs on GitHub with as much detail as you can provide. If you want to support ongoing work,
+        you can also visit the donation page.
+      </p>
+      <p><a href={site.appStore.issues}>Report a bug</a> or <a href="/donate/">support development</a></p>
+
+      <h2>I would like a translation to be added to the application.</h2>
+      <p>
+        You can contribute a new translation or suggest improvements through Crowdin.
+      </p>
+      <p><a href={site.appStore.crowdin}>Help translate Simple Text Editor</a></p>
+    </div>
+  </section>
+</BaseLayout>

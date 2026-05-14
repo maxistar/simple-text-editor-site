@@ -1,0 +1,76 @@
+---
+import { site } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h2>{site.name}</h2>
+      <p>A lightweight open-source Android app for editing plain text files.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href="/download/">Download</a>
+      <a href="/about/">About</a>
+      <a href="/donate/">Donate</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/legal/privatepolicy/">Privacy Policy</a>
+    </nav>
+    <div class="meta">
+      <a href={site.appStore.github}>GitHub</a>
+      <a href={site.appStore.issues}>Report an issue</a>
+      <span>Copyright 2026</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    background: var(--ink);
+    color: white;
+    padding: 42px 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    color: #cbd7d2;
+    max-width: 360px;
+  }
+
+  nav,
+  .meta {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+  }
+
+  a {
+    color: #dcefe7;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .meta span {
+    color: #aab9b4;
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

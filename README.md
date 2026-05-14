@@ -1,67 +1,68 @@
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/xhdpi_icon.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Simple Text Editor Website</h3>
-
-  <p align="center">
-    This is the code of Simple Text Editor Website
-    <br />
-    <a href="https://texteditor.maxistar.me"><strong>Go To Website »</strong></a>
-    <br />
-    <br />
-    <a href="https://play.google.com/store/apps/details?id=com.maxistar.textpad">Google Play</a>
-    ·
-    <a href="https://f-droid.org/packages/com.maxistar.textpad/">F-Droid</a>
-    ·
-    <a href="https://github.com/maxistar/TextPad">Report Bug</a>
-    ·
-    <a href="https://github.com/maxistar/TextPad">Request Feature</a>
-  </p>
-</div>
-
 # Simple Text Editor Website
 
-this is a repository of website [texteditor.maxistar.me](https://texteditor.maxistar.me) website. If you are looking for code of android application Simple Text Editor, you probably need link to [this repository](https://github.com/maxistar/TextPad).
+This repository contains the website for [Simple Text Editor](https://simpleditor.org), a free and open-source Android app for editing plain text files.
 
-The project is created with Static Site Generator Metal Smith. It is not guaranteed that this generator will be used in the future so I tried to make this technology agnostic as much as I can.
+If you are looking for the Android application source code, use [github.com/maxistar/TextPad](https://github.com/maxistar/TextPad).
 
+## Links
 
-## Getting Stated
+- Website: [simpleditor.org](https://simpleditor.org)
+- Google Play: [com.maxistar.textpad](https://play.google.com/store/apps/details?id=com.maxistar.textpad)
+- F-Droid: [com.maxistar.textpad](https://f-droid.org/packages/com.maxistar.textpad/)
+- Android app repository: [maxistar/TextPad](https://github.com/maxistar/TextPad)
 
-In order to get started you need npm.
+## Technology
+
+The website is built with [Astro](https://astro.build/) and published as a static site.
+
+Astro is configured in [astro.config.mjs](astro.config.mjs) to write the production build to `build/`, because the GitHub Pages workflow and the legacy manual upload command both publish that directory.
 
 ## Development
 
-### How to Build Locally
+Install dependencies:
 
-with nodejs
-
-```
-node .\build.js
+```sh
+npm install
 ```
 
-with npm:
+Start the local development server:
 
+```sh
+npm run dev
 ```
+
+Astro will print the local URL, usually:
+
+```text
+http://localhost:4321/
+```
+
+Build the production site:
+
+```sh
 npm run build
 ```
 
+Preview the production build locally:
 
-### How to start locally
-
-```
+```sh
 npm run serve
 ```
 
-### Deployment
+## Deployment
 
-the website is being deployed to my remote server with rsync command. 
+GitHub Pages deployment is handled by [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
-## Useful Links
+The workflow:
 
-- [Building a Blog with Metalsmith](http://www.blakeembrey.com/posts/2014-09-building-a-blog-with-metalsmith)
-- [Best Readme Template](https://github.com/othneildrew/Best-README-Template)
+1. Runs on pushes to `master` or manual `workflow_dispatch`.
+2. Installs dependencies with `npm ci`.
+3. Builds the site with `npm run build`.
+4. Uploads the generated `build/` directory as the GitHub Pages artifact.
+5. Deploys it with `actions/deploy-pages`.
 
+Manual server upload is still available:
+
+```sh
+npm run upload
+```
