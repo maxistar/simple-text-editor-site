@@ -1,7 +1,7 @@
 export const site = {
   name: 'Simple Text Editor',
   url: 'https://simpleditor.org',
-  analyticsId: 'G-CQPG8QPYVQ',
+  analyticsId: 'G-QZQFDHF4N8',
   packageId: 'com.maxistar.textpad',
   version: '1.29.1',
   versionCode: '58',
